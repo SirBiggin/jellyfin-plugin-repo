@@ -9,12 +9,28 @@
     "imageUrl": "https://repo.jellyfin.org/releases/plugin/images/jellyfin-plugin-ldapauth.png",
     "versions": [
       {
+        "version": "24.0.2.0",
+        "changelog": "Skip the Jellyfin user rename when the LDAP username differs from the Jellyfin username only by case (upstream #201). Jellyfin 10.11+ rejects case-only renames, which made login fail for such users. Includes the AD unicodePwd password-change fix from x.0.1.0.",
+        "targetAbi": "12.0.0.0",
+        "sourceUrl": "https://github.com/SirBiggin/jellyfin-plugin-ldapauth/releases/download/v24.0.2.0/ldap-auth_24.0.2.0.zip",
+        "checksum": "e33da1b7b91ea73315b4bd6d6dff6ee1",
+        "timestamp": "2026-09-11T17:31:15.0000000Z"
+      },
+      {
         "version": "24.0.1.0",
         "changelog": "Active Directory fix: \"Allow Password Change\" now works against AD (unicodePwd written as quoted UTF-16LE). Set LDAP Password Attribute to unicodePwd and delegate Reset Password to the bind account. Otherwise identical to upstream. (based on upstream master/v24 for Jellyfin 12)",
         "targetAbi": "12.0.0.0",
         "sourceUrl": "https://github.com/SirBiggin/jellyfin-plugin-ldapauth/releases/download/v24.0.1.0/ldap-auth_24.0.1.0.zip",
         "checksum": "a0b51660bffe9f21e9f1e3d108f13e2f",
         "timestamp": "2026-09-10T23:37:19.0000000Z"
+      },
+      {
+        "version": "23.0.2.0",
+        "changelog": "Skip the Jellyfin user rename when the LDAP username differs from the Jellyfin username only by case (upstream #201). Jellyfin 10.11+ rejects case-only renames, which made login fail for such users. Includes the AD unicodePwd password-change fix from x.0.1.0.",
+        "targetAbi": "10.11.9.0",
+        "sourceUrl": "https://github.com/SirBiggin/jellyfin-plugin-ldapauth/releases/download/v23.0.2.0/ldap-auth_23.0.2.0.zip",
+        "checksum": "64fc5e85559727d8bd7a72d6e8c1798f",
+        "timestamp": "2026-09-11T17:31:15.0000000Z"
       },
       {
         "version": "23.0.1.0",
