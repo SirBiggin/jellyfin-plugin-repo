@@ -26,6 +26,8 @@ Upstream issues [#164](https://github.com/jellyfin/jellyfin-plugin-ldapauth/issu
 
 Source: [SirBiggin/jellyfin-plugin-ldapauth](https://github.com/SirBiggin/jellyfin-plugin-ldapauth)
 (branches `patch-v23` and `patch-v24`).
+Technical breakdown of each patch, including the withdrawn case-only rename change (23.0.2.0 / 24.0.2.0):
+[PATCHES.md](https://github.com/SirBiggin/jellyfin-plugin-ldapauth/blob/patch-v23/PATCHES.md).
 
 | Version | Jellyfin | Based on | Branch |
 |---|---|---|---|
