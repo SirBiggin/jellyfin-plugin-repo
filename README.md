@@ -24,13 +24,17 @@ with one change: `ChangePassword` writes `unicodePwd` the way Active Directory r
 Upstream issues [#164](https://github.com/jellyfin/jellyfin-plugin-ldapauth/issues/164) /
 [#200](https://github.com/jellyfin/jellyfin-plugin-ldapauth/issues/200).
 
+Also skips the Jellyfin user rename when the LDAP username differs from the Jellyfin username only by case
+(upstream [#201](https://github.com/jellyfin/jellyfin-plugin-ldapauth/issues/201)); Jellyfin 10.11+ rejects
+case-only renames, which made login and password change fail for such users.
+
 Source: [SirBiggin/jellyfin-plugin-ldapauth](https://github.com/SirBiggin/jellyfin-plugin-ldapauth)
 (branches `patch-v23` and `patch-v24`).
 
 | Version | Jellyfin | Based on | Branch |
 |---|---|---|---|
-| 23.0.1.0 | 10.11.x (`targetAbi` 10.11.9.0) | upstream v23 | `patch-v23` |
-| 24.0.1.0 | 12.x (`targetAbi` 12.0.0.0) | upstream master/v24 | `patch-v24` |
+| 23.0.2.0 | 10.11.x (`targetAbi` 10.11.9.0) | upstream v23 | `patch-v23` |
+| 24.0.2.0 | 12.x (`targetAbi` 12.0.0.0) | upstream master/v24 | `patch-v24` |
 
 The plugin keeps upstream's GUID, so Jellyfin sees it as an update of the stock LDAP plugin
 and the existing configuration carries over. A later upstream release with a higher version
