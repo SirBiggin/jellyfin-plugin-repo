@@ -1,6 +1,6 @@
 # Jellyfin plugin repository
 
-Manifest-based plugin repository for patched Jellyfin plugins.
+Manifest-based plugin repository for my Jellyfin plugins and patched builds.
 
 ## Add to Jellyfin
 
@@ -45,6 +45,20 @@ number will supersede it unless the patch is rebased and republished.
 To use the fix, in the plugin settings set **LDAP Password Attribute** to `unicodePwd`, tick
 **Allow Password Change**, and delegate *Reset Password* (plus write on `pwdLastSet`) on the
 users' OU to the bind account. The connection must be LDAPS or StartTLS or AD refuses the write.
+
+### JellyCover (Hardcover.app book metadata + covers)
+
+Metadata provider for **Book** libraries backed by the [Hardcover.app](https://hardcover.app) GraphQL API:
+descriptions, release dates, genres, moods, ratings, series + position, publisher, ISBN/ASIN, contributors,
+cover images (book + edition covers), plus author biographies and photos. Needs a free Hardcover
+personal access token with the `read:catalog` scope
+([create one](https://hardcover.app/account/api/keys/new?scope=read:catalog)).
+
+Source: [SirBiggin/JellyCover](https://github.com/SirBiggin/JellyCover)
+
+| Version | Jellyfin | Notes |
+|---|---|---|
+| 1.0.0.0 | 12.2+ (`targetAbi` 12.2.0.0) | Initial release |
 
 ## Publishing a new version
 
