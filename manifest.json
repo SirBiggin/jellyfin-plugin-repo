@@ -52,6 +52,14 @@
     "imageUrl": "",
     "versions": [
       {
+        "version": "1.0.1.0",
+        "changelog": "Pause on Hardcover's daily limit instead of spamming 429s; no title-search fallback when the API is unavailable; read Calibre metadata.opf sidecars (title, author, ISBN, ASIN, series); ASIN lookups; author-aware scoring; truncated file-name handling",
+        "targetAbi": "12.2.0.0",
+        "sourceUrl": "https://github.com/SirBiggin/JellyCover/releases/download/v1.0.1.0/jellycover_1.0.1.0.zip",
+        "checksum": "25c251c52a1079ed8e58fe4b1cd8de31",
+        "timestamp": "2026-10-15T14:56:15.0000000Z"
+      },
+      {
         "version": "1.0.0.0",
         "changelog": "Initial release",
         "targetAbi": "12.2.0.0",
